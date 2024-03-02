@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TY RJ College Login</title>
+    <style>
+        body {
+            color: rgb(11, 10, 10);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            background-image: url('brd.jpg'); /* Replace with the path to your image file */
+    background-size: cover;
+    justify-content: center;
+        }
+
+      
+
+        .header1{
+            background-color: rgb(109, 85, 137);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+        }
+
+       
+
+        .login-container {
+           /* background-color: rgba(255, 255, 255, 0.9);  Semi-transparent white background */
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+            margin-left: 575px;
+            margin-top: -48px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        h2{
+            color: #fff;
+        }
+
+        h3{
+            color:#fff;
+        }
+
+        
+
+.img{
+          width: 7%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header  class="header1">
+        <img class="img" src="logo.png" alt="">
+
+        <h1>RAMNIRANJAN JHUNJHUNWALA COLLEGE OF ARTS , COMMERCE AND SCIENCE (AUTONOMOUS)</h1>
+    </header>
+
+    
+     
+      <section>
+    
+      <center> <h2> Login to Proceed... </h2>
+      </center>
+    <br>
+
+
+    <div class="login-container" id="teacherLogin">
+        <h3>Teacher Login</h3>
+        <form onsubmit="login('teacher'); return false;">
+            <input type="text" placeholder="Teacher Name" required id="teacherID">
+            <input type="password" placeholder="Password" required id="teacherPassword">
+            <input type="text" placeholder="Teacher Code" required id="teacherCode">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+      </section>
+
+    <script>
+        function login(userType) {
+            if (userType === 'student') {
+                // Simulating successful student login
+                const rollNo = document.getElementById('rollNo').value;
+                const studentID = document.getElementById('studentID').value;
+                alert(`Welcome Student!\nRoll No.: ${rollNo}\nStudent ID: ${studentID}`);
+            } else if (userType === 'teacher') {
+                // Simulating successful teacher login
+                const teacherID = document.getElementById('teacherID').value;
+                const teacherCode = document.getElementById('teacherCode').value;
+                alert(`Welcome Teacher!\nTeacher Name: ${teacherID}\nTeacher Code: ${teacherCode}`);
+                window.location.href = 'teacher.html';
+            }
+        }
+    </script>
+</body>
+</html>

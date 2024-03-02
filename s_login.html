@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TY RJ College Login</title>
+    <style>
+       body {
+            background-image: url(brd.jpg);
+            color: rgb(11, 10, 10);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-size: cover;
+
+        }
+
+        header {
+            background-color: rgb(109 85 137);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            display: flex;
+
+        }
+
+        .login-container {
+           /* background-color: rgba(255, 255, 255, 0.9);  Semi-transparent white background */
+            padding: 30px;
+            border-radius: 5px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the container */
+            justify-content: center;
+            margin-left: 525px;
+            margin-top: -60px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .background-image{
+    background-image: url('brd.jpg'); /* Replace with the path to your image file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+}
+
+        .img{
+          width: 7%;
+        }
+
+        h2{
+            color: #fff;
+        }
+
+        h3{
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <img class="img" src="logo.png" alt="">
+
+        <h1>RAMNIRANJAN JHUNJHUNWALA COLLEGE OF ARTS , COMMERCE AND SCIENCE (AUTONOMOUS)</h1>
+    </header>
+
+    <section>
+<center> <h2> Login to Proceed... </h2>
+    </center>
+           
+<br><br>
+    
+    <div class="login-container" id="studentLogin">
+        <h3>Student Login</h3>
+        <form onsubmit="login('student'); return false;">
+            <input type="text" placeholder="Roll No." required id="rollNo">
+            <input type="text" placeholder="Student Name" required id="studentID">
+            <input type="password" placeholder="Password" required id="studentPassword">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    </section>
+    <script>
+        function login(userType) {
+            if (userType === 'student') {
+                // Simulating successful student login
+                const rollNo = document.getElementById('rollNo').value;
+                const studentID = document.getElementById('studentID').value;
+                alert(`Welcome Student!\nRoll No.: ${rollNo}\nStudent ID: ${studentID}`);
+                window.location.href = 'student.html';
+
+            } else if (userType === 'teacher') {
+                // Simulating successful teacher login
+                const teacherID = document.getElementById('teacherID').value;
+                alert(`Welcome Teacher!\nTeacher ID: ${teacherID}`);
+            }
+        }
+    </script>
+</body>
+</html>
